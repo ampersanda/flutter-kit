@@ -11,3 +11,6 @@
 
 (defn help! [arguments]
   (println (arguments :summary)))
+
+(defn exit! []
+  (System/exit 0))

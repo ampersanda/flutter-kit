@@ -9,3 +9,6 @@
 (defn write-file [filename spitted-string]
   (io/make-parents filename)
   (spit filename spitted-string))
+
+(defn file-exists? [_]
+  (.exists (io/as-file _)))
