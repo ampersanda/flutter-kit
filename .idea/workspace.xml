@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93b873f7-3f54-431f-a9e6-e7c9d8450e30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/flutterreleasecli/commands.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="93b873f7-3f54-431f-a9e6-e7c9d8450e30" name="Default Changelist" comment="adding flutter project check and fix wrong spitting alias variable">
+      <change afterPath="$PROJECT_DIR$/src/flutterreleasecli/validation.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/cli_helper.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutterreleasecli/cli_helper.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/commands.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutterreleasecli/commands.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutterreleasecli/core.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/path.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutterreleasecli/path.clj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,34 +27,36 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="clj" value="17" />
+          <entry key="clj" value="20" />
           <entry key="gitignore" value="3" />
           <entry key="md" value="6" />
-          <entry key="properties" value="3" />
-          <entry key="yaml" value="1" />
+          <entry key="properties" value="4" />
+          <entry key="yaml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Clojure" value="17" />
+          <entry key="Clojure" value="20" />
           <entry key="Git file" value="3" />
           <entry key="Markdown" value="6" />
-          <entry key="Properties" value="3" />
-          <entry key="YAML" value="1" />
+          <entry key="Properties" value="4" />
+          <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="clj" value="4598" />
+          <entry key="clj" value="5185" />
           <entry key="gitignore" value="9" />
           <entry key="md" value="337" />
+          <entry key="txt" value="68" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Clojure" value="4598" />
+          <entry key="Clojure" value="5185" />
           <entry key="Git file" value="9" />
           <entry key="Markdown" value="337" />
+          <entry key="PLAIN_TEXT" value="68" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.test" />
@@ -72,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/cli_helper.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="252">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -81,10 +81,31 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+            <state relative-caret-position="165">
+              <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
               <folding>
                 <element signature="e#0#277#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/validation.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/commands.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#119#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,9 +142,10 @@
         <option value="$PROJECT_DIR$/src/flutterreleasecli/cli-helper.clj" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/flutterreleasecli/path.clj" />
         <option value="$PROJECT_DIR$/src/flutterreleasecli/commands.clj" />
         <option value="$PROJECT_DIR$/src/flutterreleasecli/cli_helper.clj" />
-        <option value="$PROJECT_DIR$/src/flutterreleasecli/path.clj" />
+        <option value="$PROJECT_DIR$/src/flutterreleasecli/validation.clj" />
         <option value="$PROJECT_DIR$/src/flutterreleasecli/core.clj" />
       </list>
     </option>
@@ -159,24 +181,18 @@
             <path>
               <item name="flutterreleasecli" type="b2602c69:ProjectViewProjectNode" />
               <item name="flutterreleasecli" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flutterreleasecli" type="b2602c69:ProjectViewProjectNode" />
               <item name="flutterreleasecli" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="flutterreleasecli" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flutterreleasecli" type="b2602c69:ProjectViewProjectNode" />
               <item name="flutterreleasecli" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutterreleasecli" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="flutterreleasecli" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="stale" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -190,7 +206,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533478125069" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533479646444" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -226,15 +242,24 @@
       <updated>1533355740062</updated>
       <workItem from="1533355747572" duration="7288000" />
       <workItem from="1533364141045" duration="18115000" />
-      <workItem from="1533474733682" duration="2299000" />
+      <workItem from="1533474733682" duration="3732000" />
     </task>
+    <task id="LOCAL-00001" summary="adding flutter project check and fix wrong spitting alias variable">
+      <created>1533478169235</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1533478169235</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27702000" />
+    <option name="totallyTimeSpent" value="29135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24236111" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -304,6 +329,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding flutter project check and fix wrong spitting alias variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding flutter project check and fix wrong spitting alias variable" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.8.0/clojure-1.8.0.jar!/clojure/core.clj">
       <provider selected="true" editor-type-id="text-editor">
@@ -329,13 +358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android/key.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -343,10 +365,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/path.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/key.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/commands.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#119#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -360,31 +406,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/commands.clj">
+    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/validation.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-654">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/path.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        <state relative-caret-position="168">
+          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/cli_helper.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="252">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        <state relative-caret-position="165">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
           <folding>
             <element signature="e#0#277#0" expanded="true" />
           </folding>

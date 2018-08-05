@@ -14,13 +14,12 @@
   (println "Alias Password : (will be seen)")
   (read-line))
 
+(defn create-key-properties [keystore-path keystore-password alias alias-password filename]
+  (path-helper/write-file filename
+                          (str "storePassword=" keystore-password "\nkeyPassword=" alias-password "\nkeyAlias=" alias "\nstoreFile=" keystore-path)))
+
 (defn process-keystore! [keystore-path]
-  (let [keystore-password (input-keystore-password)
-        alias             (input-alias)
-        alias-password    (input-alias-password)
-        filename          "android/key.properties"]
-    (path-helper/write-file filename
-                            (str "storePassword=" keystore-password "\nkeyPassword=" alias-password "\nkeyAlias=" alias "\nstoreFile=" keystore-path))))
+  (create-key-properties keystore-path (input-keystore-password) (input-alias) (input-alias-password) "android/key.properties"))
 
 (defn ask-for-keystore [keystore-path]
   (if (nil? keystore-path)
