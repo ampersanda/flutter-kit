@@ -14,10 +14,7 @@
   (println "Alias Password : (will be seen)")
   (read-line))
 
-(def sign-gradle-1-str
-  (str "def keystorePropertiesFile = rootProject.file(\"key.properties\")"))
-
-(defn sign-gradle-1 []
+(defn sign-gradle []
   (let [filepath                "android/app/build.gradle"
         old                     (slurp filepath)
         addition-ex             #"def keystorePropertiesFile ?= ?rootProject.file\(\"key\.properties\"\)\ndef keystoreProperties ?= ?new Properties\(\)\nkeystoreProperties\.load\(new FileInputStream\(keystorePropertiesFile\)\)\n\nandroid ?\{"
@@ -48,7 +45,7 @@
 
 (defn process-keystore! [keystore-path]
   (create-key-properties keystore-path (input-keystore-password) (input-alias) (input-alias-password) "android/key.properties")
-  (sign-gradle-1))
+  (sign-gradle))
 
 (defn ask-for-keystore [keystore-path]
   (if (nil? keystore-path)
