@@ -36,8 +36,6 @@
         ;; when valid flutter
         (run!? arguments)
         ;; else
-        (do
-          (println "Not a valid flutter project :(")
-          (System/exit 0)))
+        (println "Not a valid flutter project :("))
       ;; when error
       (help! arguments))))
