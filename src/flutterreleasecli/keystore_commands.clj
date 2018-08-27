@@ -1,4 +1,4 @@
-(ns flutterreleasecli.commands
+(ns flutterreleasecli.keystore_commands
   (:require [flutterreleasecli.path :as path-helper]
             [me.raynes.fs :as fs]
             [flutterreleasecli.signing-commands :as signing]))

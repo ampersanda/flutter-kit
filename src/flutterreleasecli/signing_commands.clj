@@ -1,5 +1,7 @@
 (ns flutterreleasecli.signing-commands
-  (:require [flutterreleasecli.path :as path-helper]))
+  (:use flutterreleasecli.cli_helper)
+  (:require [flutterreleasecli.path :as path-helper]
+            [flutterreleasecli.proguard-commands :as proguard]))
 
 (defn add-signing-configs [gradle-filepath]
   (let [rgx-buildTypes #"buildTypes\s*\{\s*release\s*\{"
@@ -15,8 +17,7 @@
                             "buildTypes {" "\n"
                             "    release {")
         gradle (slurp gradle-filepath)
-        signingConfig-finder (re-find (re-matcher rgx-signingConfig gradle))
-        ]
+        signingConfig-finder (re-find (re-matcher rgx-signingConfig gradle))]
     (if (nil? signingConfig-finder)
       ;; when signingConfig not found
       ;; add signingConfig
@@ -60,10 +61,5 @@
         (path-helper/write-file (str gradle-filepath ".bak") old-gradle)
         ;; create new file
         (println "Create new build.gradle ..")
-        (path-helper/write-file gradle-filepath (clojure.string/replace-first old-gradle #"android ?\{" keyprops))
-
-        ;; change signing config from debug to release
-        (configure-signing gradle-filepath))
-      ;; else
-      ;; change signing config from debug to release
-      (configure-signing gradle-filepath))))
+        (path-helper/write-file gradle-filepath (clojure.string/replace-first old-gradle #"android ?\{" keyprops))))
+    (configure-signing gradle-filepath)))
