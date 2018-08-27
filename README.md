@@ -7,4 +7,4 @@
     3. is extension .jks?
     4. Input all info for make key.properties
     5. Spit key.properties
-3. 
+3. Add Sign Gradle

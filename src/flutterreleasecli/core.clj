@@ -3,8 +3,7 @@
         [flutterreleasecli.path :only [file-exists?]]
         [flutterreleasecli.commands :only [ask-for-keystore]]
         [flutterreleasecli.validation :only [is-flutter?]])
-  (:require [clojure.tools.cli :refer [parse-opts]]
-            [me.raynes.fs :as fs])
+  (:require [clojure.tools.cli :refer [parse-opts]])
   (:gen-class))
 
 (def app-name "flutter-kit")
