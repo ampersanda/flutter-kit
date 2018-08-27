@@ -9,3 +9,4 @@
     5. Spit key.properties
 3. Add Sign Gradle
 4. Proguard
+5. Build release APK

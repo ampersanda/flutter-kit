@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93b873f7-3f54-431f-a9e6-e7c9d8450e30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/flutterreleasecli/proguard_commands.clj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/flutterreleasecli/apk_commands.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/commands.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutterreleasecli/keystore_commands.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutterreleasecli/core.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/signing_commands.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutterreleasecli/signing_commands.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/keystore_commands.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutterreleasecli/keystore_commands.clj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,12 +28,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="bak" value="4" />
+          <entry key="bak" value="5" />
           <entry key="class" value="1" />
-          <entry key="clj" value="74" />
+          <entry key="clj" value="79" />
           <entry key="gitignore" value="3" />
           <entry key="gradle" value="16" />
-          <entry key="md" value="9" />
+          <entry key="md" value="10" />
           <entry key="pro" value="1" />
           <entry key="properties" value="6" />
           <entry key="xml" value="1" />
@@ -45,11 +43,11 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="Clojure" value="74" />
+          <entry key="Clojure" value="79" />
           <entry key="Git file" value="3" />
           <entry key="Groovy" value="16" />
-          <entry key="Markdown" value="9" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Markdown" value="10" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="ProGuard File" value="1" />
           <entry key="Properties" value="6" />
           <entry key="XML" value="1" />
@@ -58,21 +56,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="clj" value="8794" />
+          <entry key="clj" value="9279" />
           <entry key="gitignore" value="9" />
           <entry key="gradle" value="55" />
-          <entry key="md" value="369" />
+          <entry key="md" value="378" />
+          <entry key="pro" value="2" />
           <entry key="properties" value="1" />
-          <entry key="txt" value="217" />
+          <entry key="txt" value="251" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Clojure" value="8794" />
+          <entry key="Clojure" value="9279" />
           <entry key="Git file" value="9" />
           <entry key="Groovy" value="55" />
-          <entry key="Markdown" value="369" />
-          <entry key="PLAIN_TEXT" value="217" />
+          <entry key="Markdown" value="378" />
+          <entry key="PLAIN_TEXT" value="251" />
+          <entry key="ProGuard File" value="2" />
           <entry key="Properties" value="1" />
         </counts>
       </usages-collector>
@@ -91,8 +91,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="828">
-                  <caret line="50" column="48" lean-forward="true" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+                <state relative-caret-position="-542">
+                  <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -102,10 +102,19 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/keystore_commands.clj">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/signing_commands.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="161">
-                  <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+                <state relative-caret-position="275">
+                  <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -113,8 +122,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/core.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-276">
-                  <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+                <state relative-caret-position="161">
+                  <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/apk_commands.clj">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="92">
+                  <caret line="4" column="69" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="69" />
                 </state>
               </provider>
             </entry>
@@ -128,22 +146,48 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/proguard_commands.clj">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="12">
+                <state relative-caret-position="-126">
                   <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/cli_helper.clj">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor relative-caret-position="56">
+                    <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+                  </first_editor>
+                  <second_editor />
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/validation.clj">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="92">
+                  <caret line="4" column="16" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="16" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/path.clj">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="46">
+                  <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/android/app/proguard-rules.pro.bak">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -177,16 +221,18 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/flutterreleasecli/path.clj" />
         <option value="$PROJECT_DIR$/src/flutterreleasecli/cli_helper.clj" />
-        <option value="$PROJECT_DIR$/src/flutterreleasecli/validation.clj" />
         <option value="$PROJECT_DIR$/src/flutterreleasecli/signin_commands.clj" />
         <option value="$PROJECT_DIR$/src/flutterreleasecli/commands.clj" />
         <option value="$PROJECT_DIR$/android/key.properties" />
-        <option value="$PROJECT_DIR$/src/flutterreleasecli/keystore_commands.clj" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/flutterreleasecli/signing_commands.clj" />
-        <option value="$PROJECT_DIR$/src/flutterreleasecli/core.clj" />
         <option value="$PROJECT_DIR$/android/app/build.gradle" />
         <option value="$PROJECT_DIR$/src/flutterreleasecli/proguard_commands.clj" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/android/app/proguard-rules.pro" />
+        <option value="$PROJECT_DIR$/src/flutterreleasecli/validation.clj" />
+        <option value="$PROJECT_DIR$/src/flutterreleasecli/keystore_commands.clj" />
+        <option value="$PROJECT_DIR$/src/flutterreleasecli/core.clj" />
+        <option value="$PROJECT_DIR$/src/flutterreleasecli/apk_commands.clj" />
       </list>
     </option>
   </component>
@@ -239,6 +285,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="flutterreleasecli" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="flutterreleasecli" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutterreleasecli" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutterreleasecli" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutterreleasecli" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -253,7 +309,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/android/key.properties&#10;/Users/ampersanda/IdeaProjects/flutterreleasecli/android/app/proguard-rules.pro&#10;true&#10;/Users/ampersanda/IdeaProjects/flutterreleasecli/android/app/build.gradle" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535364020370" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535366861165" />
     <property name="cursive.last.file.extension./Users/ampersanda/IdeaProjects/flutterreleasecli/src" value="clj" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -288,6 +344,24 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="flutterreleasecli.core" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
+      <module name="flutterreleasecli" />
+      <setting name="path" value="" />
+      <setting name="namespace" value="flutterreleasecli.core" />
+      <setting name="useLein" value="false" />
+      <setting name="profiles" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Clojure Application.flutterreleasecli.core" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="93b873f7-3f54-431f-a9e6-e7c9d8450e30" name="Default Changelist" comment="" />
@@ -299,7 +373,7 @@
       <workItem from="1533364141045" duration="18115000" />
       <workItem from="1533474733682" duration="8220000" />
       <workItem from="1533526061441" duration="170000" />
-      <workItem from="1535345091930" duration="10782000" />
+      <workItem from="1535345091930" duration="12812000" />
     </task>
     <task id="LOCAL-00001" summary="adding flutter project check and fix wrong spitting alias variable">
       <created>1533478169235</created>
@@ -343,17 +417,24 @@
       <option name="project" value="LOCAL" />
       <updated>1535360715433</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add proguard option using -p">
+      <created>1535364049900</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1535364049900</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44575000" />
+    <option name="totallyTimeSpent" value="46605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19652778" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19652778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -363,13 +444,13 @@
       <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32932693" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3391892" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.33842537" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2173913" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29259694" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="REPL" order="0" side_tool="true" />
@@ -460,7 +541,8 @@
     <MESSAGE value="delete unnecessary variable" />
     <MESSAGE value="add Configure signing in gradle step" />
     <MESSAGE value="refactoring commands" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring commands" />
+    <MESSAGE value="add proguard option using -p" />
+    <option name="LAST_COMMIT_MESSAGE" value="add proguard option using -p" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.8.0/clojure-1.8.0.jar!/clojure/core.clj">
@@ -528,37 +610,6 @@
     <entry file="file://$PROJECT_DIR$/android/key.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="39">
-            <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/keystore_commands.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/path.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/validation.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="55" lean-forward="true" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/cli_helper.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -566,19 +617,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/signing_commands.clj">
+    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/proguard_commands.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="-126">
+          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/core.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276">
-          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/android/app/proguard-rules.pro.bak">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/android/app/proguard-rules.pro">
       <provider selected="true" editor-type-id="text-editor">
@@ -587,17 +634,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="50" column="48" lean-forward="true" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="56">
+            <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/proguard_commands.clj">
+    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/path.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+        <state relative-caret-position="46">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/validation.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-542">
+          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/signing_commands.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/keystore_commands.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/flutterreleasecli/apk_commands.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="69" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="69" />
         </state>
       </provider>
     </entry>

@@ -44,8 +44,14 @@
           ;; else
           (do
             (println "File is not keystore")
-            (if (nil? keystore-path) (ask-for-keystore nil) (System/exit 0)))))
+            (if (nil? keystore-path)
+              (ask-for-keystore nil)
+              ;; exit the app avoid to adding proguard
+              (System/exit 0)))))
       ;; else
       (do
         (println "File is not exists")
-        (if (nil? keystore-path) (ask-for-keystore nil) (System/exit 0))))))
+        (if (nil? keystore-path)
+          (ask-for-keystore nil)
+          ;; exit the app avoid to adding proguard
+          (System/exit 0))))))
