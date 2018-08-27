@@ -8,6 +8,6 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/tools.cli "0.3.7"]
                  [me.raynes/fs "1.4.6"]]
-  :bin { :name "flutter-kit" }
+  :bin { :name "flutter-android-signing" }
   :main flutterreleasecli.core
   :aot :all)
