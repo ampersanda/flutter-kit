@@ -38,12 +38,9 @@
     :default
     false]
 
-   ["-apk" "--apk" "Build APK"
+   ["-apk" "--apk" "Build APK for release"
     :default
-    false]
-
-   ;; help
-   ["-h" "--help"]])
+    false]])
 
 (defn -main [& args]
   (let [arguments  (parse-opts args cli-options)]
