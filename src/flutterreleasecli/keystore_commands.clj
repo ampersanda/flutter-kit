@@ -1,19 +1,19 @@
 (ns flutterreleasecli.keystore_commands
   (:require [flutterreleasecli.path :as path-helper]
             [me.raynes.fs :as fs]
-            [flutterreleasecli.signing-commands :as signing]))
+            [flutterreleasecli.signing-commands :as signing]
+            [flutterreleasecli.cli_helper :as cli]))
 
 (defn input-keystore-password []
-  (println "Keystore Password : (will be seen)")
-  (read-line))
+  (cli/read-password "Keystore Password : "))
 
 (defn input-alias []
-  (println "Alias Name : ")
+  (print "Alias Name : ")
+  (flush)
   (read-line))
 
 (defn input-alias-password []
-  (println "Alias Password : (will be seen)")
-  (read-line))
+  (cli/read-password "Alias Password : "))
 
 (defn create-key-properties [keystore-path keystore-password alias alias-password filename]
   (path-helper/write-file filename
@@ -25,7 +25,7 @@
 
 (defn ask-for-keystore [keystore-path]
   (if (nil? keystore-path)
-    (println "Enter where the keystore is! (ex : ~/development/flutter/keystore.jks)"))
+    (print "Enter where the keystore is! (ex : ~/development/flutter/keystore.jks)"))
 
   (let [keystore-path-ask (if (nil? keystore-path) (read-line) keystore-path)
         keystore-path-expanded (path-helper/expand-home keystore-path-ask)]

@@ -53,6 +53,6 @@
         ;; when valid flutter
         (run!? arguments)
         ;; else
-        (println "Not a valid flutter project :("))
+        (println "Not a valid Flutter Android project :("))
       ;; when error
       (help! arguments))))
