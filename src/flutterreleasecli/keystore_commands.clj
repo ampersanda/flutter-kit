@@ -36,7 +36,7 @@
     (if (path-helper/file-exists? keystore-path-expanded)
       ;; when file exists
       (let [file-extension (peek (fs/split-ext keystore-path-expanded))
-            is-jks? (= file-extension ".jks")]
+            is-jks? (or (= file-extension ".jks") (= file-extension ".keystore"))]
 
         (if is-jks?
           ;; when jks

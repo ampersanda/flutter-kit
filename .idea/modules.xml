@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/flutterreleasecli.iml" filepath="$PROJECT_DIR$/.idea/flutterreleasecli.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flutterreleasecli.iml" filepath="$PROJECT_DIR$/flutterreleasecli.iml" />
     </modules>
   </component>
 </project>
