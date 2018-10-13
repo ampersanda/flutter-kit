@@ -4,4 +4,4 @@
 3. run `./flutter-android-signing -p -apk` for complete actions with proguard and building the apk or run `./flutter-android-signing` for just signing 
 
 
-Steps is from https://flutter.io/android-release/
+Steps are from https://flutter.io/android-release/
