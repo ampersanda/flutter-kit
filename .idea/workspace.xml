@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6624a62e-66c8-476b-b758-a1453815d4c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/deps.edn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flutter_kit/core.clj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flutter_kit/errors.clj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flutter_kit/proguard.clj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/flutter_kit/unsign.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter-android-signing" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/apk_commands.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/apk_commands.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/cli_helper.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/cli_helper.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/core.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/keystore_commands.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/keystore_commands.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/path.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/path.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/proguard_commands.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/signing_commands.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/signing_commands.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutterreleasecli/validation.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/validation.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/flutterreleasecli/core_test.clj" beforeDir="false" afterPath="$PROJECT_DIR$/test/flutter_kit/core_test.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flutter_kit/proguard.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/proguard.clj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,8 +43,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567520325258</updated>
-      <workItem from="1567520327918" duration="8918000" />
+      <workItem from="1567520327918" duration="9066000" />
     </task>
+    <task id="LOCAL-00001" summary="use deps.end &amp; configure proguard">
+      <created>1567531660244</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567531660244</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,5 +68,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="use deps.end &amp; configure proguard" />
+    <option name="LAST_COMMIT_MESSAGE" value="use deps.end &amp; configure proguard" />
   </component>
 </project>

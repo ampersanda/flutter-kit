@@ -13,9 +13,7 @@
                                "-keep class io.flutter.**  { *; }" "\n"
                                "-keep class io.flutter.plugins.**  { *; }")]
     (if (file-exists? proguard-filepath)
-      ;; exists
       (write-file (str proguard-filepath ".bak") (slurp proguard-filepath))
-      ;; else
       (write-file proguard-filepath str-proguard)))
 
   (println "✅️ Done."))
@@ -37,10 +35,11 @@
         proguard-finder   (re-find (re-matcher rgx-proguard gradle))]
 
     (if (nil? proguard-finder)
-      (write-file app-gradle-path
-                  (clojure.string/replace-first gradle rgx-signingConfig str-obfuscation)))
-
-    (println "✅️ Done.")))
+      (do
+        (write-file app-gradle-path
+                  (clojure.string/replace-first gradle rgx-signingConfig str-obfuscation))
+        (println "✅️ Done."))
+      (println "🚫️ Failed to enable obfuscation and minification."))))
 
 (defn proguard []
   "install proguard"
