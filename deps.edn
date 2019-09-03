@@ -1,6 +1,5 @@
 {:deps    {org.clojure/clojure      {:mvn/version "1.10.0"}
            org.clojure/tools.cli    {:mvn/version "0.4.2"}
-           org.clojure/tools.reader {:mvn/version "1.0.0-beta4"}
            me.raynes/fs             {:mvn/version "1.4.6"}}
  :paths   ["src" "test"]
  :aliases {:sign {:main-opts ["-m flutter-kit.core"]}

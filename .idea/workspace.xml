@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6624a62e-66c8-476b-b758-a1453815d4c8" name="Default Changelist" comment="">
+    <list default="true" id="6624a62e-66c8-476b-b758-a1453815d4c8" name="Default Changelist" comment="copy keystore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deps.edn" beforeDir="false" afterPath="$PROJECT_DIR$/deps.edn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutter_kit/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/core.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutter_kit/signing_commands.clj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/flutter_kit/core_test.clj" beforeDir="false" afterPath="$PROJECT_DIR$/test/flutter_kit/core_test.clj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +49,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567520325258</updated>
-      <workItem from="1567520327918" duration="12367000" />
+      <workItem from="1567520327918" duration="17518000" />
     </task>
     <task id="LOCAL-00001" summary="use deps.end &amp; configure proguard">
       <created>1567531660244</created>
@@ -89,7 +86,28 @@
       <option name="project" value="LOCAL" />
       <updated>1567534811075</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix namespaces">
+      <created>1567535203792</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567535203792</updated>
+    </task>
+    <task id="LOCAL-00007" summary="setup bin">
+      <created>1567535220063</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1567535220063</updated>
+    </task>
+    <task id="LOCAL-00008" summary="delete unnecessary code, fix copy jks file, refactor">
+      <created>1567541459406</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567541459406</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +130,9 @@
     <MESSAGE value="rename defns" />
     <MESSAGE value="convert minification error message to positive message" />
     <MESSAGE value="sign" />
-    <option name="LAST_COMMIT_MESSAGE" value="sign" />
+    <MESSAGE value="fix namespaces" />
+    <MESSAGE value="setup bin" />
+    <MESSAGE value="delete unnecessary code, fix copy jks file, refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete unnecessary code, fix copy jks file, refactor" />
   </component>
 </project>
