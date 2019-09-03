@@ -72,7 +72,7 @@
       :else
       (let [{:keys [keystore-path proguard]} options]
         (when
-          proguard (proguard!/proguard))
+          proguard (proguard!/install!))
 
         ))))
 

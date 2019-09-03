@@ -41,10 +41,10 @@
         (println "✅️ Done."))
       (println "🚫️ Failed to enable obfuscation and minification."))))
 
-(defn proguard []
+(defn install! []
   "install proguard"
   (configure-proguard)
   (enable-obfuscation-and-or-minification))
 
-(defn remove-proguard []
+(defn uninstall! []
   "remove proguard for unsigning")
