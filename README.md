@@ -15,7 +15,10 @@ flutter-kit --proguard --keystore-path=keystore.jks --keystore-password=password
 ### To Do
 
 - [x] Android Signing
+- [ ] Revert Android Signing
 - [x] Android Proguard setup
-- [ ] Migrate to AndroidX 
+- [ ] Android Proguard setup
+- [ ] Migrate to AndroidX
+- [ ] Migrate to AppCompat
 
 Steps are from https://flutter.io/android-release/
