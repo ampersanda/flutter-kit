@@ -1,31 +1,15 @@
 (ns flutter-kit.core
-  (:use [flutter-kit.cli_helper]
-        [flutter-kit.path :only [file-exists?]]
-        [flutter-kit.keystore_commands :only [ask-for-keystore]])
   (:require [clojure.tools.cli :refer [parse-opts cli]]
             [flutter-kit.proguard :as proguard!]
             [flutter-kit.apk-commands :as apk]
             [clojure.string :as string]
+            [flutter-kit.path :refer [file-exists?]]
             [flutter-kit.keystore :as keystore!]
             [flutter-kit.errors :refer [error-msg]]
             [flutter-kit.unsign :refer [unsign]]
             [flutter-kit.validation :refer [is-flutter?]])
 
   (:gen-class))
-
-(defn run!? [arguments]
-  (let [keystore-path (:keystore-path (arguments :options))
-        proguard      (:proguard (get-options! arguments))
-        apk           (:apk (get-options! arguments))]
-    (if (nil? keystore-path)
-      ;; when keystore param is nil
-      (ask-for-keystore nil)
-      ;; when keystore param is available
-      (ask-for-keystore (:keystore-path (get-options! arguments))))
-
-    (if apk
-      (do (println "Building APK..")
-        (apk/build)))))
 
 (def cli-options
   [["-h" "--help"]

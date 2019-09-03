@@ -1,5 +1,4 @@
 (ns flutter-kit.signing-commands
-  (:use flutter-kit.cli_helper)
   (:require [flutter-kit.path :as path-helper]))
 
 (defn add-signing-configs [gradle-filepath]

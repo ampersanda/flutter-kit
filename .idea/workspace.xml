@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6624a62e-66c8-476b-b758-a1453815d4c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/flutter_kit/keystore.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flutter_kit/cli_helper.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/cli_helper.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/flutter_kit/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/core.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/flutter_kit/proguard.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/proguard.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flutter_kit/keystore.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/keystore.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flutter_kit/keystore_commands.clj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flutter_kit/signing_commands.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/signing_commands.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/flutter_kit/validation.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/flutter_kit/validation.clj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567520325258</updated>
-      <workItem from="1567520327918" duration="10749000" />
+      <workItem from="1567520327918" duration="12049000" />
     </task>
     <task id="LOCAL-00001" summary="use deps.end &amp; configure proguard">
       <created>1567531660244</created>
@@ -75,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567531853317</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="convert minification error message to positive message">
+      <created>1567533484189</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567533484189</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +105,7 @@
     <MESSAGE value="use deps.end &amp; configure proguard" />
     <MESSAGE value="add failed message when creating proguard" />
     <MESSAGE value="rename defns" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename defns" />
+    <MESSAGE value="convert minification error message to positive message" />
+    <option name="LAST_COMMIT_MESSAGE" value="convert minification error message to positive message" />
   </component>
 </project>
