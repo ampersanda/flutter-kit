@@ -6,6 +6,7 @@
             [flutter-kit.proguard :as proguard!]
             [flutter-kit.apk-commands :as apk]
             [clojure.string :as string]
+            [flutter-kit.keystore :as keystore!]
             [flutter-kit.errors :refer [error-msg]]
             [flutter-kit.unsign :refer [unsign]]
             [flutter-kit.validation :refer [is-flutter?]])
@@ -29,14 +30,18 @@
 (def cli-options
   [["-h" "--help"]
    [nil "--unsign" "Delete project signing"]
-   ["-k" "--keystore-path=PATH" "Path to keystore/jks file"]
+   [nil "--keystore-path=PATH" "Path to keystore/jks file"]
+   [nil "--keystore-password=PASSWORD" "Keystore password"]
+   [nil "--keystore-alias=ALIAS_NAME" "Keystore alias name"]
+   [nil "--keystore-alias-password=ALIAS_PASSWORD" "Keystore alias password"]
    ["-p" "--proguard" "Enable Proguard"
     :default
     false]])
 
 (defn usage [options-summary]
   (->>
-   ["Easy android flutter signing. example: flutter-android-signing --keystore-path=~/keysotre.jks --proguard"
+   ["Easy android flutter signing."
+    "example: flutter-android-signing --keystore-path=\"~/keystore.jks\" --proguard"
     ""
     "Usage: flutter-android-signing [options]"
     ""
@@ -48,12 +53,12 @@
   (let [{:keys [options arguments errors summary]} (parse-opts args cli-options)]
 
     (cond
-      (:help options)                      {:message (usage summary)}
-      errors                               {:message (error-msg errors)}
+      (:help options)                       {:message (usage summary)}
+      errors                                {:message (error-msg errors)}
 
-      (:unsign options)                    {:action unsign}
+      (:unsign options)                     {:action unsign}
       (or (> (count arguments) 0) options)  {:options options :arguments arguments}
-      :else                                {:message (usage summary)})))
+      :else                                 {:message (usage summary)})))
 
 
 (defn -main [& args]
@@ -61,6 +66,7 @@
   ;    (println "Not a valid Flutter Android project ☹️")
   ;    )
   (let [{:keys [message options arguments action]} (validate-args args)]
+
 
     (println options)
     (println arguments)
@@ -70,11 +76,23 @@
       action  (action)
 
       :else
-      (let [{:keys [keystore-path proguard]} options]
+      (let [{:keys [keystore-path
+                    keystore-password
+                    keystore-alias
+                    keystore-alias-password
+                    proguard]} options]
         (when
           proguard (proguard!/install!))
 
-        ))))
+        (when
+          (or keystore-path keystore-password keystore-alias keystore-alias-password)
+          (cond
+            (not keystore-path)           (println "🚫 Keystore path is required for signing")
+            (not keystore-password)       (println "🚫 Keystore password is required for signing")
+            (not keystore-alias)          (println "🚫 Keystore alias is required for signing")
+            (not keystore-alias-password) (println "🚫 Keystore alias password is required for signing")
+
+            :else                         (keystore!/install! keystore-path keystore-password keystore-alias keystore-alias-password)))))))
 
 ;  (let [arguments  (parse-opts args cli-options)]
 ;    (if (nil? (get-error! arguments))

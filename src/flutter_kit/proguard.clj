@@ -39,7 +39,7 @@
         (write-file app-gradle-path
                   (clojure.string/replace-first gradle rgx-signingConfig str-obfuscation))
         (println "✅️ Done."))
-      (println "🚫️ Failed to enable obfuscation and minification."))))
+      (println "❇️️ Obfuscation and minification already enabled. Skipping.."))))
 
 (defn install! []
   "install proguard"
