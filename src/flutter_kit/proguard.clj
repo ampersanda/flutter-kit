@@ -1,5 +1,6 @@
 (ns flutter-kit.proguard
-  (:require [flutter-kit.path :refer [write-file file-exists?]]))
+  (:require [flutter-kit.path :refer [write-file]]
+            [me.raynes.fs :refer [exists?]]))
 
 (defn- configure-proguard []
   (println "▶️ Configuring proguard...")
@@ -12,7 +13,7 @@
                                "-keep class io.flutter.view.**  { *; }" "\n"
                                "-keep class io.flutter.**  { *; }" "\n"
                                "-keep class io.flutter.plugins.**  { *; }")]
-    (if (file-exists? proguard-filepath)
+    (if (exists? proguard-filepath)
       (write-file (str proguard-filepath ".bak") (slurp proguard-filepath))
       (write-file proguard-filepath str-proguard)))
 

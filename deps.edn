@@ -7,6 +7,7 @@
            :create-bin
            {:main-opts ["-m clj.native-image flutter-kit.core"
                         "--initialize-at-build-time"
+                        "--no-fallback"
                         ;; optional native image name override
                         "-H:Name=flutter-kit"]
             :jvm-opts  ["-Dclojure.compiler.direct-linking=true"]

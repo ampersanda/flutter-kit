@@ -2,7 +2,6 @@
   (:require [clojure.tools.cli :refer [parse-opts cli]]
             [flutter-kit.proguard :as proguard!]
             [clojure.string :as string]
-            [flutter-kit.path :refer [file-exists?]]
             [flutter-kit.keystore :as keystore!]
             [flutter-kit.errors :refer [error-msg]]
             [flutter-kit.unsign :refer [unsign]]
@@ -12,7 +11,7 @@
 
 (def cli-options
   [["-h" "--help"]
-   [nil "--unsign" "Delete project signing"]
+   [nil "--unsign" "Delete project signing (not yet implemented, please help)"]
    [nil "--keystore-path=PATH" "Path to keystore/jks file"]
    [nil "--keystore-password=PASSWORD" "Keystore password"]
    [nil "--keystore-alias=ALIAS_NAME" "Keystore alias name"]
@@ -45,45 +44,29 @@
 
 
 (defn -main [& args]
-  ;  (if-not (is-flutter?)
-  ;    (println "Not a valid Flutter Android project ☹️")
-  ;    )
-  (let [{:keys [message options arguments action]} (validate-args args)]
+    (if-not (is-flutter?)
+      (do
+        (println "🚫 This folder is not a valid Flutter Android project️"))
+      (let [{:keys [message options arguments action]} (validate-args args)]
+        (cond
+          message (println message)
+          action  (action)
 
+          :else
+          (let [{:keys [keystore-path
+                        keystore-password
+                        keystore-alias
+                        keystore-alias-password
+                        proguard]} options]
+            (when
+              proguard (proguard!/install!))
 
-    (println options)
-    (println arguments)
+            (when
+              (or keystore-path keystore-password keystore-alias keystore-alias-password)
+              (cond
+                (not keystore-path)           (println "🚫 Keystore path is required for signing")
+                (not keystore-password)       (println "🚫 Keystore password is required for signing")
+                (not keystore-alias)          (println "🚫 Keystore alias is required for signing")
+                (not keystore-alias-password) (println "🚫 Keystore alias password is required for signing")
 
-    (cond
-      message (println message)
-      action  (action)
-
-      :else
-      (let [{:keys [keystore-path
-                    keystore-password
-                    keystore-alias
-                    keystore-alias-password
-                    proguard]} options]
-        (when
-          proguard (proguard!/install!))
-
-        (when
-          (or keystore-path keystore-password keystore-alias keystore-alias-password)
-          (cond
-            (not keystore-path)           (println "🚫 Keystore path is required for signing")
-            (not keystore-password)       (println "🚫 Keystore password is required for signing")
-            (not keystore-alias)          (println "🚫 Keystore alias is required for signing")
-            (not keystore-alias-password) (println "🚫 Keystore alias password is required for signing")
-
-            :else                         (keystore!/install! keystore-path keystore-password keystore-alias keystore-alias-password)))))))
-
-;  (let [arguments  (parse-opts args cli-options)]
-;    (if (nil? (get-error! arguments))
-;      ;; error is nil - no error
-;      (if (is-flutter?)
-;        ;; when valid flutter
-;        (run!? arguments)
-;        ;; else
-;        (println "Not a valid Flutter Android project :("))
-;      ;; when error
-;      (help! arguments))))
+                :else                         (keystore!/install! keystore-path keystore-password keystore-alias keystore-alias-password))))))))
