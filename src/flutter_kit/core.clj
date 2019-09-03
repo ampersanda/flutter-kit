@@ -1,7 +1,6 @@
 (ns flutter-kit.core
   (:require [clojure.tools.cli :refer [parse-opts cli]]
             [flutter-kit.proguard :as proguard!]
-            [flutter-kit.apk-commands :as apk]
             [clojure.string :as string]
             [flutter-kit.path :refer [file-exists?]]
             [flutter-kit.keystore :as keystore!]

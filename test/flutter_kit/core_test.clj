@@ -1,6 +1,6 @@
-(ns flutterreleasecli.core-test
+(ns flutter-kit.core-test
   (:require [clojure.test :refer :all]
-            [flutterreleasecli.core :refer :all]))
+            [flutter-kit.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
