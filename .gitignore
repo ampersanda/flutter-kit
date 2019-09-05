@@ -14,3 +14,8 @@ pom.xml.asc
 pubspec.yaml
 *.jks
 *.keystore
+flutter-kit
+.DS_Store
+.cpcache/
+src/.DS_Store
+test/.DS_Store
