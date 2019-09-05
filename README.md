@@ -1,7 +1,10 @@
+# Flutter Kit
+
+[![CircleCI](https://circleci.com/gh/ampersanda/flutter-kit.svg?style=svg)](https://circleci.com/gh/ampersanda/flutter-kit)
+
 # How to use
 1. Download `flutter-kit` (https://github.com/ampersanda/flutter-kit/releases)
 2. Add to your `PATH` or just place it inside your flutter project
-
 
 #### Proguard only
 ```
