@@ -1,6 +1,8 @@
 (ns flutter-kit.proguard
   (:require [flutter-kit.path :refer [write-file]]
-            [me.raynes.fs :refer [exists?]]))
+            [me.raynes.fs :refer [exists?]]
+            [flutter-kit.androidx :as androidx]
+            [flutter-kit.path :refer [app-gradle-path]]))
 
 (defn- configure-proguard []
   (println "▶️ Configuring proguard...")
@@ -19,33 +21,39 @@
 
   (println "✅️ Done."))
 
-(defn- enable-obfuscation-and-or-minification []
+(defn- enable-obfuscation-and-or-minification [use-androidx?]
   (println "▶️ Enabling obfuscation and minification...")
-  (let [app-gradle-path   "android/app/build.gradle"
-        gradle            (slurp app-gradle-path)
+  (let [gradle                                 (slurp app-gradle-path)
 
-        rgx-proguard      #"useProguard\s*true"
+        rgx-proguard                           #"useProguard\s*true"
 
-        rgx-signingConfig #"signingConfig\s*signingConfigs\.(release|debug)"
-        signinConfigMode  (second (re-find (re-matcher rgx-signingConfig gradle)))
+        rgx-signingConfig                      #"signingConfig\s*signingConfigs\.(\w+)"
+        signinConfigMode                       (second (re-find (re-matcher rgx-signingConfig gradle)))
 
-        str-obfuscation   (str "signingConfig signingConfigs." signinConfigMode "\n\n"
-                               "            minifyEnabled true" "\n"
-                               "            useProguard true" "\n\n"
-                               "            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'")
-        proguard-finder   (re-find (re-matcher rgx-proguard gradle))]
+        str-obfuscation                        (str "signingConfig signingConfigs." signinConfigMode "\n\n"
+                                                    "            minifyEnabled true" "\n"
+                                                    "            useProguard true" "\n\n"
+                                                    "            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'")
+        has-proguard?                           (re-find (re-matcher rgx-proguard gradle))
 
-    (if (nil? proguard-finder)
+        rgx-flutter-fragment                   #"implementation\s*[\'\"]com\.android\.support:support-fragment:(.*)[\'\"]"
+        str-fragment-androidx                  ""]
+
+;    dependencies\s*\{(\s*implementation\s*[\'\"].*[\'\"]\s*)*\s*(implementation\s*[\'\"]com\.android\.support:support-fragment:(.*)[\'\"])\s*(implementation\s*[\'\"].*[\'\"]\s*)*
+
+    (androidx/install!)
+
+    (if (nil? has-proguard?)
       (do
         (write-file app-gradle-path
-                  (clojure.string/replace-first gradle rgx-signingConfig str-obfuscation))
+                    (clojure.string/replace-first gradle rgx-signingConfig str-obfuscation))
         (println "✅️ Done."))
       (println "❇️️ Obfuscation and minification already enabled. Skipping.."))))
 
-(defn install! []
+(defn install! [use-androidx?]
   "install proguard"
   (configure-proguard)
-  (enable-obfuscation-and-or-minification))
+  (enable-obfuscation-and-or-minification use-androidx?))
 
 (defn uninstall! []
   "remove proguard for unsigning")

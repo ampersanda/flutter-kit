@@ -1,9 +1,10 @@
 (ns flutter-kit.validation
-  (:use [me.raynes.fs :only [exists?]]))
+  (:require [me.raynes.fs :refer [exists?]]
+            [flutter-kit.path :refer [pubspec-path app-gradle-path android-gradle-path manifest-path]]))
 
 (defn is-flutter? []
-  (let [pubspec?        (exists? "pubspec.yaml")
-        android-gradle? (exists? "android/build.gradle")
-        app-gradle?     (exists? "android/app/build.gradle")
-        manifest?       (exists? "android/app/src/main/AndroidManifest.xml")]
+  (let [pubspec?        (exists? pubspec-path)
+        android-gradle? (exists? android-gradle-path)
+        app-gradle?     (exists? app-gradle-path)
+        manifest?       (exists? manifest-path)]
     (and pubspec? android-gradle? app-gradle? manifest?)))
