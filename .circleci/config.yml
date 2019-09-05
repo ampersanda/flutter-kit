@@ -17,17 +17,25 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "install clojure"
+          name: creating artifacts folder
+          command: mkdir /tmp/artifacts
+      - run:
+          name: install clojure
           command: curl -O https://download.clojure.org/install/linux-install-1.10.1.466.sh && chmod +x linux-install-1.10.1.466.sh && sudo ./linux-install-1.10.1.466.sh
       - run:
-          name: "downloading graalvm"
+          name: downloading graalvm
           command: curl -L https://github.com/oracle/graal/releases/download/vm-19.1.1/graalvm-ce-linux-amd64-19.1.1.tar.gz | tar -xz
       - run:
-          name: "set graalvm path"
+          name: set graalvm path
           command: echo 'export GRAALVM_HOME=./graalvm-ce-19.1.1' >> $BASH_ENV
       - run:
-          name: "install native-image using gu"
+          name: install native-image using gu
           command: $GRAALVM_HOME/bin/gu install native-image
       - run:
-          name: "build"
+          name: build
           command: clojure -A:create-bin
+      - run:
+          name: move artifact to folder
+          command: mv ./flutter-kit /tmp/artifacts
+      - store_artifacts:
+          path: /tmp/artifacts
