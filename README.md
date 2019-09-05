@@ -20,7 +20,7 @@ flutter-kit --proguard --keystore-path=keystore.jks --keystore-password=password
 - [x] Android Signing
 - [ ] Revert Android Signing
 - [x] Android Proguard setup
-- [ ] Android Proguard setup
+- [ ] Revert Android Proguard setup
 - [ ] Migrate to AndroidX
 - [ ] Migrate to AppCompat
 
