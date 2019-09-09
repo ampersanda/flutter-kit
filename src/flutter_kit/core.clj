@@ -3,6 +3,7 @@
             [flutter-kit.proguard :as proguard!]
             [clojure.string :as string]
             [flutter-kit.keystore :as keystore!]
+            [flutter-kit.androidx :as androidx]
             [flutter-kit.errors :refer [error-msg]]
             [flutter-kit.unsign :refer [unsign]]
             [flutter-kit.validation :refer [is-flutter?]])
@@ -64,7 +65,9 @@
             androidx
             (do
               (println "❗️ AndroidX migration needs proguard.")
-              (proguard!/install! true))
+;              (proguard!/install! true)
+;              (androidx/install!)
+              )
 
             proguard
             (proguard!/install! androidx))

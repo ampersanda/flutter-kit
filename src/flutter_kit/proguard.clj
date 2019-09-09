@@ -23,25 +23,22 @@
 
 (defn- enable-obfuscation-and-or-minification [use-androidx?]
   (println "▶️ Enabling obfuscation and minification...")
-  (let [gradle                                 (slurp app-gradle-path)
+  (let [gradle                                  (slurp app-gradle-path)
 
-        rgx-proguard                           #"useProguard\s*true"
+        rgx-proguard                            #"useProguard\s*true"
 
-        rgx-signingConfig                      #"signingConfig\s*signingConfigs\.(\w+)"
-        signinConfigMode                       (second (re-find (re-matcher rgx-signingConfig gradle)))
+        rgx-signingConfig                       #"signingConfig\s*signingConfigs\.(\w+)"
+        signinConfigMode                        (second (re-find (re-matcher rgx-signingConfig gradle)))
 
-        str-obfuscation                        (str "signingConfig signingConfigs." signinConfigMode "\n\n"
-                                                    "            minifyEnabled true" "\n"
-                                                    "            useProguard true" "\n\n"
-                                                    "            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'")
-        has-proguard?                           (re-find (re-matcher rgx-proguard gradle))
+        str-obfuscation                         (str "signingConfig signingConfigs." signinConfigMode "\n\n"
+                                                     "            minifyEnabled true" "\n"
+                                                     "            useProguard true" "\n\n"
+                                                     "            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'")
+        has-proguard?                           (re-find (re-matcher rgx-proguard gradle))]
 
-        rgx-flutter-fragment                   #"implementation\s*[\'\"]com\.android\.support:support-fragment:(.*)[\'\"]"
-        str-fragment-androidx                  ""]
-
-;    dependencies\s*\{(\s*implementation\s*[\'\"].*[\'\"]\s*)*\s*(implementation\s*[\'\"]com\.android\.support:support-fragment:(.*)[\'\"])\s*(implementation\s*[\'\"].*[\'\"]\s*)*
-
-    (androidx/install!)
+    ;;; FIXME
+;    (println (clojure.string/replace gradle #"[\/]{2,}.*" ""))
+    ;;; FIXME - EOL
 
     (if (nil? has-proguard?)
       (do
