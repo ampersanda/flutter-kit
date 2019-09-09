@@ -64,7 +64,8 @@
         (println "🔨 Create new build.gradle ..")
         (write-file gradle-filepath
                     (clojure.string/replace-first old-gradle #"android ?\{" keyprops))))
-    (configure-signing gradle-filepath)))
+    (configure-signing gradle-filepath)
+    (add-signing-configs gradle-filepath)))
 
 (defn- set-release-mode [path]
   (sign-gradle))
